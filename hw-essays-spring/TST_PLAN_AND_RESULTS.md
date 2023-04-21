@@ -18,7 +18,9 @@ WA1.8	Functional
 WA1.9	Integration  
 WA1.10	Result : Login Page Produces correct results for each.
 
-<video src='/hw-essays-spring/images/wa_1.mp4' width=180/>
+
+https://user-images.githubusercontent.com/48165574/233714918-4d2b848e-1edf-47de-9077-1de02610d286.mp4
+
 	  
 **WA2.1	Web Application Test 2**  
 WA2.2	Ensure that the registration works correctly.    
