@@ -8,6 +8,7 @@ $ .\env\Scripts\activate
 $ pip3 install -r requirements.txt
 ```
 <br />
+
 > Set Up Flask Environment
 ```bash
 $ # CMD 
@@ -19,6 +20,7 @@ $ $env:FLASK_APP = ".\run.py"
 $ $env:FLASK_ENV = "development"
 ```
 <br />
+
 > Start the app
 ```bash
 $ flask run
