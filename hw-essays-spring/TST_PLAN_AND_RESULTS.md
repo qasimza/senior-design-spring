@@ -19,7 +19,7 @@ WA1.9	Integration
 WA1.10	Result : Login Page Produces correct results for each.
   
 Testing with correct credentials 
-![Login Test](/hw-essays-spring/images/wa1.mp4)
+![Login Test](/hw-essays-spring/images/wa_1.mp4)
 
 Testing wit hincorrect credentials 
 	  
