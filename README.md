@@ -6,7 +6,7 @@
 
 ## 2. User Interface Specification (optional inclusion of UI design)
 
-[Click here to read user interface specification.](hw-essays-spring/USER_INTERFACE_SPECIFICATION.md)
+[Click here to read user interface specification.](hw-essays-spring/USER_INTERFACE_SPECIFICATIONS.md)
 
 ## 3. Test Plan and Results (describe execution and results of all tests)
 
