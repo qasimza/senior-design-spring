@@ -2,6 +2,8 @@
 
 ## 1. Project Description
 
+[Click here to read final project description.](hw-essays-spring/PROJECT_DESCRIPTION.md)
+
 ## 2. User Interface Specification (optional inclusion of UI design)
 
 ## 3. Test Plan and Results (describe execution and results of all tests)
