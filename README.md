@@ -1,4 +1,4 @@
-# Fall Design Report 
+# Final Design Report 
 
 ## 1. Project Description
 
