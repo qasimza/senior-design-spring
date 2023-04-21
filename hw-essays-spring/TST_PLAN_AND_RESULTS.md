@@ -3,8 +3,6 @@
 ## Description of Overall Test Plan
 Tune-Me is a web-based application that allows users to generate playlists based on the parameters provided by them. The testing approach involves individually testing each component of the project as well as the integration of each of these components at various interfaces. While the recommendation system is a part of the web-application, the two are separated for simplicity. The recommendation system tests may not be exhaustive since the multitude of possible queries is virtually infinite. Instead, broader categories of tests are identified (based on most likely use cases) to ensure the proper working of the system. Test results will be logged for debugging and record purposes.  
 
-Note: Please ignore the pink water mark/reflection in the video tests. These are not a glitch with the application but an issue with the screen recorder I used. 
-
 ## Test Case Descriptions and Results
   
 Following tests were conducted to validate project outcomes. n > 5.
@@ -34,9 +32,8 @@ WA2.7	Black-Box
 WA2.8	Functional  
 WA2.9	Integration  
 WA2.10	Result: Registration page works seamlessly.  
- 
 
-https://user-images.githubusercontent.com/48165574/233715908-d5ddbafa-c7a8-47a3-bf0a-72580c14e1f4.mp4
+https://user-images.githubusercontent.com/48165574/233735319-9722b22b-153e-44f3-b418-a82cda3d63e3.mp4
 
 
 **WA3.1	Web Application Test 3**  
@@ -49,6 +46,10 @@ WA2.7	Black-Box
 WA2.8	Functional  
 WA2.9	Integration  
 WA2.10	Result: Home page works seamlessly and maintains credentials needed.   
+
+
+https://user-images.githubusercontent.com/48165574/233735620-7382f3ff-3a9f-41c0-96b1-98925e6dfc77.mp4
+
 	  
 **WA4.1	Web Application Test 4**
 WA4.2	Ensure that the search page works correctly.
@@ -60,17 +61,22 @@ WA4.7	Black-Box
 WA4.8	Functional
 WA4.9	Integration
 WA4.10	Result: Results page rendered with matching suggestions (accuracy of results measured in RS tests) 
+
+https://user-images.githubusercontent.com/48165574/233741092-6fb95265-e99e-4e44-8db9-b44fc829515b.mp4
+
 	
 **WA5.1	Web Application Test 5**  
 WA5.2	Ensure that the results page works correctly.  
 WA5.3	Ensure that buttons from the results page redirect to correct pages.  
-WA5.4	Input: Click each of the buttons on the home page.  
+WA5.4	Input: Click each of the buttons on the results page.  
 WA5.5	Output: Correct pages are redirected to and rendered based on user session values.  
 WA5.6	Normal  
 WA5.7	Black-Box  
 WA5.8	Functional  
 WA5.9	Integration  
 WA5.10	Result: Results page works seamlessly.   
+
+Refer video for WA4 above for the same.
 	  
 **WA6.1	Web Application Test 6**  
 WA6.2	Ensure that the user profile is updated correctly.   
@@ -81,7 +87,10 @@ WA6.6	Normal
 WA6.7	Black-Box  
 WA6.8	Functional  
 WA6.9	Integration  
-WA6.10	Result: Changes are logged correctly.  
+WA6.10	Result: Changes are logged correctly. 
+
+https://user-images.githubusercontent.com/48165574/233741497-de628f21-ee96-428b-b423-fa893705dddc.mp4
+
 	
 **RS.1.1	Recommendation System Test 1**  
 RS.1.2	Ensure that the top n songs (based on similarity score) are output when only Song is provided in query.    
