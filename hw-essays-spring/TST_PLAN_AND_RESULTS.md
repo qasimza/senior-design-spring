@@ -17,11 +17,8 @@ WA1.7	Black-Box
 WA1.8	Functional  
 WA1.9	Integration  
 WA1.10	Result : Login Page Produces correct results for each.
-  
-Testing with correct credentials 
-![Login Test](/hw-essays-spring/images/wa_1.mp4)
 
-Testing wit hincorrect credentials 
+<video src='/hw-essays-spring/images/wa_1.mp4' width=180/>
 	  
 **WA2.1	Web Application Test 2**  
 WA2.2	Ensure that the registration works correctly.    
