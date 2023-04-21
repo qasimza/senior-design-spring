@@ -27,7 +27,7 @@
 ## 7.  Assessments
 
   ### 1.  Initial Self-Assessments (fall semester)
-   [Click here to read final self-assessment.](hw-essays-fall/FINAL_SELF_ASSESSMENT.md)
+   [Click here to read final self-assessment.](hw-essays-fall/Individual-Capstone-Assessment.md)
 
   ### 2.  Final Self-Assessments (spring semester)
   [Click here to read final self-assessment.](hw-essays-spring/FINAL_ASSESSMENT_SPRING.md)
