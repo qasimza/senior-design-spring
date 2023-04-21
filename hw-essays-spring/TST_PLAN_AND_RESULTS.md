@@ -9,14 +9,14 @@ Following tests were conducted to validate project outcomes. n > 5.
 
 **WA1.1	Web Application Test 1**
 WA1.2	Ensure that the login/logout authentication works correctly.  
-WA1.3	Test that the login page redirects to home page if attempting to login with pre-exiting credentials entered correctly. Test with incorrect credentials to ensure user is redirected back to login page. 
-WA1.4	Input: Correct Credentials (1), Incorrect Credentials (2) 
-WA1.5	Output: Home Page (1), Redirected to Login Page with error message (2)
-WA1.6	Both
-WA1.7	Black-Box
-WA1.8	Functional
-WA1.9	Integration
-WA1.10	Result : Login Page Produces correct results for each.
+WA1.3	Test that the login page redirects to home page if attempting to login with pre-exiting credentials entered correctly. Test with incorrect credentials to ensure user is redirected back to login page.  
+WA1.4	Input: Correct Credentials (1), Incorrect Credentials (2)  
+WA1.5	Output: Home Page (1), Redirected to Login Page with error message (2)  
+WA1.6	Both  
+WA1.7	Black-Box  
+WA1.8	Functional  
+WA1.9	Integration  
+WA1.10	Result : Login Page Produces correct results for each.  
 	
 **WA2.1	Web Application Test 2**
 WA2.2	Ensure that the registration works correctly.  
