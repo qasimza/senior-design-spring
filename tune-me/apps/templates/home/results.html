@@ -1,0 +1,94 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %} Search Results {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="content">
+    <div class="container">
+        <div class="row pt-5 justify-content-center">
+        <div class="col-md-12">
+            <div class="card ">
+            <div class="card-header text-center py-4">
+                <h4 class="title"> Here are your search results!
+                </h4>
+
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                <table class="table tablesorter " id="">
+                    <thead class=" text-primary">
+                    <tr>
+                        <th>
+                        Song Title
+                        </th>
+                        <th>
+                        Artist
+                        </th>
+                        <th>
+                        Genres
+                        </th>
+                        <th>
+                        Themes
+                        </th>
+                        <th class="text-center">
+                        Year
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% if not recommended_songs.empty %}
+                        {% for index, song in recommended_songs.iterrows() %}
+                        <tr>
+                            <td>
+                                <b>{{ song['track_name'] }}</b>
+                                <br>
+                                <i>{{ song['album_name'] }}</i>
+                            </td>
+                            <td>
+                                {{ song['artists']}}
+                            </td>
+                            <td>
+                                {{ song['track_genre']}}
+                            </td>
+                            <td>
+                                Not Available
+                            </td>
+                            <td>
+                                {{ song['year'] }}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+                        <span>
+                         Gotic
+                        </span>
+                        {% endif %}
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="card-footer text-center">
+                <button type="button" class="btn btn-fill btn-primary">Export Playlist to Spotify</button>
+                <button type="button" class="btn btn-fill btn-primary">Modify Search</button>
+                <a href="/search" class="button btn btn-fill btn-primary">New Search</a>
+                <a href="/index" class="button btn btn-fill btn-primary">Home</a>
+                <br /><br />
+                
+            </div>
+            </div>
+        </div>
+      
+        </div>
+    </div>
+  </div>
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

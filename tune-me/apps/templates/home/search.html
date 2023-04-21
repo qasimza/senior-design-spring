@@ -1,0 +1,180 @@
+{% extends "layouts/base-fullscreen.html" %}
+
+{% block title %} Search {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="content">
+        <div class="container">
+            <div class="row pt-5 justify-content-center">
+                <div class="col-md-12 mt-5 pt-5 mt-5">
+                    <div class="card">
+                        <div class="card-header text-center py-4">
+                            <h4 class="title">
+                                Generate Playlist
+                            </h4>
+                        </div>
+                        <form role="form" method="post" action="">
+                            {{ form.hidden_tag() }}
+
+                        <div class="card-body px-5 py-3">
+                            
+                                <div class="row">
+                                    
+                                    <div class="col-md-5 px-md-1">
+                                        <div class="form-group">
+                                            <label>Song Title</label>
+                                            {{ form.song_title(class="form-control", placeholder="Enter Song Title") }}
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 px-md-1">
+                                        <div class="form-group">
+                                            <label>Artist</label>
+                                            {{ form.artist(class="form-control", placeholder="Enter Artist Name") }}
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2 px-md-1">
+                                        <div class="form-group">
+                                            <label>Year</label>
+                                            {{ form.year(type="number", class="form-control", placeholder="Select Year",  min="1600", max="2030", placeholder="2023") }}
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-md-2 px-md-1">
+                                        <div class="form-group">
+                                            <label>Number of Tracks</label>
+                                            {{ form.num_tracks(type="number", class="form-control", placeholder="Select number of tracks",  min="5", max="50", value="5") }}
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 px-md-1">
+                                        <div class="form-group">
+                                            <label>Genres</label>
+                                            {{ form.genres(class="form-control", placeholder="Select Generes", multiple=True) }}
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 px-md-1">
+                                        <div class="form-group">
+                                            <label>Themes</label>
+                                            {{ form.themes(class="form-control", placeholder="Select Themes", multiple=True) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row pt-3">
+
+                                    <h5 class="title">
+                                        Advanced Search
+                                    </h5>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 px-md-1">
+                                        <div class="form-group">
+                                            <label>Popularity</label>
+                                            {{ form.popularity(type="number", class="form-control", placeholder="Scale: 0(least), 100 (most)",  min="0", max="100") }}
+                                           
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 px-md-1">
+                                        <div class="form-group">
+                                            <label>Danceability</label>
+                                            {{ form.danceability(type="number", class="form-control", placeholder="Scale: 0(least), 100 (most)",  min="0", max="100") }}
+                                           
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 px-md-1">
+                                        <div class="form-group">
+                                            <label>Energy</label>
+                                            {{ form.energy(type="number", class="form-control", placeholder="Scale: 0(least), 100 (most)",  min="0", max="100") }}
+                                           
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-4 px-md-1">
+                                        <div class="form-group">
+                                            <label>Loudness</label>
+                                            {{ form.loudness(type="number", class="form-control", placeholder="Scale: -60 dB to 538 dB",  min="-60", max="538") }}
+                                           
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 px-md-1">
+                                        <div class="form-group">
+                                            <label>Speechiness</label>
+                                            {{ form.speechiness(type="number", class="form-control", placeholder="Scale: 0(least), 100 (most)",  min="0", max="100") }}
+                                           
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 px-md-1">
+                                        <div class="form-group">
+                                            <label>Acoustics</label>
+                                            {{ form.acoustics(type="number", class="form-control", placeholder="Scale: 0(least), 100 (most)",  min="0", max="100") }}
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 px-md-1">
+                                        <div class="form-group">
+                                            <label>Instrumentalness</label>
+                                            {{ form.instrumentalness(type="number", class="form-control", placeholder="Scale: 0(least), 100 (most)",  min="0", max="100") }}
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 px-md-1">
+                                        <div class="form-group">
+                                            <label>Liveness</label>
+                                            {{ form.liveness(type="number", class="form-control", placeholder="Scale: 0(least), 100 (most)",  min="0", max="100") }}
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 px-md-1">
+                                        <div class="form-group">
+                                            <label>Valence</label>
+                                            {{ form.valence(type="number", class="form-control", placeholder="Scale: 0(least), 100 (most)",  min="0", max="100") }}
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 px-md-1">
+                                        <div class="form-group">
+                                            <label>Tempo</label>
+                                            {{ form.tempo(type="number", class="form-control", placeholder="Scale: 0 to 246",  min="0", max="246") }}
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 px-md-1 text-center">
+                                        <div class="form-group">
+                                            {{ form.explicit(type="checkbox", class="form-control; form-check-input") }}
+                                            <label>Check to Include Explicit Content</label>
+                                        </div>
+                                    </div>
+
+                                </div>    
+
+                        </div>
+                        <div class="card-footer text-center">
+                            <div class="row justify-content-center">
+                              <div class="col-md-5 px-md-3"><button type="submit" name="search" class="btn btn-fill btn-primary">Search</button></div>
+                              <div class="col-md-5 px-md-3"><a href="/index.html" class="btn btn-fill btn-primary">Back</a></div>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
