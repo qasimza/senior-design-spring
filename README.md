@@ -30,7 +30,7 @@
    [Click here to read final self-assessment.](hw-essays-fall/FINAL_SELF_ASSESSMENT.md)
 
   ### 2.  Final Self-Assessments (spring semester)
-  [Click here to read final self-assessment.](hw-essays-spring/SELF_ASSESSMENT_SPRING.md)
+  [Click here to read final self-assessment.](hw-essays-spring/FINAL_ASSESSMENT_SPRING.md)
 
 ## 8.  Summary of Hours and Justification (one per individual team member)
   [Click here to read summary of hours and justification.](hw-essays-spring/SUMMARY_OF_HOURS.md)
