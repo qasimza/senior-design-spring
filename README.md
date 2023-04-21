@@ -16,7 +16,7 @@
 
   ### 1.  Initial Self-Assessments (fall semester)
 
-  ### 2.  Final Self-Assessments (spring semester, do not include confidentialTeam-Assessments)
+  ### 2.  Final Self-Assessments (spring semester)
 
 ## 8.  Summary of Hours and Justification (one per individual team member)
 
