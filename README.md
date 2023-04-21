@@ -10,7 +10,7 @@
 
 ## 3. Test Plan and Results (describe execution and results of all tests)
 
-[Click here to read test plan and results.](hw-essays-spring/TEST_PLAN_AND_RESULTS.md)
+[Click here to read test plan and results.](hw-essays-spring/TST_PLAN_AND_RESULTS.md)
 
 ## 4.  User Manual 
 
