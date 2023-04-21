@@ -1,7 +1,9 @@
 # Test Plan and Results
 
 ## Description of Overall Test Plan
-Tune-Me is a web-based application that allows users to generate playlists based on the parameters provided by them. The testing approach involves individually testing each component of the project as well as the integration of each of these components at various interfaces. While the recommendation system is a part of the web-application, the two are separated for simplicity. The recommendation system tests may not be exhaustive since the multitude of possible queries is virtually infinite. Instead, broader categories of tests are identified (based on most likely use cases) to ensure the proper working of the system. Test results will be logged for debugging and record purposes.
+Tune-Me is a web-based application that allows users to generate playlists based on the parameters provided by them. The testing approach involves individually testing each component of the project as well as the integration of each of these components at various interfaces. While the recommendation system is a part of the web-application, the two are separated for simplicity. The recommendation system tests may not be exhaustive since the multitude of possible queries is virtually infinite. Instead, broader categories of tests are identified (based on most likely use cases) to ensure the proper working of the system. Test results will be logged for debugging and record purposes.  
+
+Note: Please ignore the pink water mark/reflection in the video tests. These are not a glitch with the application but an issue with the screen recorder I used. 
 
 ## Test Case Descriptions and Results
   
