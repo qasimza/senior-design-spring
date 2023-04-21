@@ -68,7 +68,7 @@ tune-me/
    |    |    |-- includes/                  # HTML chunks and components
    |    |    |    |-- navigation.html       # Top menu component
    |    |    |    |-- sidebar.html          # Sidebar component
-    |    |    |    |-- scripts.html          # Scripts common to all pages
+   |    |    |    |-- scripts.html          # Scripts common to all pages
    |    |    |
    |    |    |-- layouts/                   # Master pages
    |    |    |    |-- base-fullscreen.html  # Used by Authentication pages
