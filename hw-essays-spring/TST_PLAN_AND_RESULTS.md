@@ -160,3 +160,9 @@ T.1.7	Black box
 T.1.8	Performance  
 T.1.9	Unit  
 T.1.10	Result: System produces desired output.  
+
+##  Test Case Matrix
+
+![Test Case Matrix](/hw-essays-spring/images/test_case_matrix.png)
+
+
