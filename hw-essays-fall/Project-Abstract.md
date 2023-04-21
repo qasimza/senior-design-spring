@@ -1,0 +1,3 @@
+# Project Abstract
+
+The most popular music-listening apps (and recommendation engines) are Apple Music and Spotify. The former uses a user's listening history, genres and artists selected at the time of creating their profile, as well as similarity to other users' preferences to recommend music while the latter breaks down a song into its rhythm and structure. However, neither app has any features for users to input how they define similarity – whether it is instrumentation, genre, etc. or a combination of such criteria.  Thus, this project aims to improve user experience by taking into account their definition of similarity while curating suggestions.
