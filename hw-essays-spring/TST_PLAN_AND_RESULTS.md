@@ -7,7 +7,7 @@ Tune-Me is a web-based application that allows users to generate playlists based
 
 Following tests were conducted to validate project outcomes. n > 5.
 
-**WA1.1	Web Application Test 1**
+**WA1.1	Web Application Test 1**  
 WA1.2	Ensure that the login/logout authentication works correctly.  
 WA1.3	Test that the login page redirects to home page if attempting to login with pre-exiting credentials entered correctly. Test with incorrect credentials to ensure user is redirected back to login page.  
 WA1.4	Input: Correct Credentials (1), Incorrect Credentials (2)  
@@ -18,16 +18,16 @@ WA1.8	Functional
 WA1.9	Integration  
 WA1.10	Result : Login Page Produces correct results for each.  
 	
-**WA2.1	Web Application Test 2**
-WA2.2	Ensure that the registration works correctly.  
-WA2.3	Test the registration page to ensure that the user is able to create a new profile (unless the user id/email already exists - display appropriate message). Display message to indicate successful creation of profile. Once the profile is created, the user should be able to login from the login page thereafter. 
-WA2.4	Input: Non existing user id credentials (1), Existing user id (2), Credentials from(1) in login page
-WA2.5	Output: Success message (1), Failure Message(2), Home page (3)  
-WA2.6	Both
-WA2.7	Black-Box
-WA2.8	Functional
-WA2.9	Integration
-WA2.10	Result: Registration page works seamlessly.
+**WA2.1	Web Application Test 2**  
+WA2.2	Ensure that the registration works correctly.    
+WA2.3	Test the registration page to ensure that the user is able to create a new profile (unless the user id/email already exists - display appropriate message). Display message to indicate successful creation of profile. Once the profile is created, the user should be able to login from the login page thereafter.   
+WA2.4	Input: Non existing user id credentials (1), Existing user id (2), Credentials from(1) in login page  
+WA2.5	Output: Success message (1), Failure Message(2), Home page (3)    
+WA2.6	Both  
+WA2.7	Black-Box  
+WA2.8	Functional  
+WA2.9	Integration  
+WA2.10	Result: Registration page works seamlessly.  
 	
 **WA3.1	Web Application Test 3**
 WA2.2	Ensure that the home page works correctly.
