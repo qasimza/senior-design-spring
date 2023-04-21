@@ -14,29 +14,29 @@
 
 ## 4.  User Manual 
 
-[Click here to read user mannual](hw-essays-spring/USER_MANNUAL.md)
+[Click here to read user mannual.](hw-essays-spring/USER_MANNUAL.md)
 
 ## 5.  Spring Final PPT Presentation
 
-[Click here to view final presentation](hw-essays-spring/FINAL_PRESENTATION.pptx)
+[Click here to view final presentation.](hw-essays-spring/FINAL_PRESENTATION.pptx)
 
 ## 6.  Final Expo Poster
 
-[Click here to view final expo poster](hw-essays-spring/FINAL_EXPO_POSTER.pdf)
+[Click here to view final expo poster.](hw-essays-spring/FINAL_EXPO_POSTER.pdf)
 
 ## 7.  Assessments
 
   ### 1.  Initial Self-Assessments (fall semester)
-   [Click here to read final self-assessment](hw-essays-fall/FINAL_SELF_ASSESSMENT.md)
+   [Click here to read final self-assessment.](hw-essays-fall/FINAL_SELF_ASSESSMENT.md)
 
   ### 2.  Final Self-Assessments (spring semester)
-  [Click here to read final self-assessment](hw-essays-spring/FINAL_SELF_ASSESSMENT.md)
+  [Click here to read final self-assessment.](hw-essays-spring/FINAL_SELF_ASSESSMENT.md)
 
 ## 8.  Summary of Hours and Justification (one per individual team member)
-  [Click here to read summary of hours and justification](hw-essays-spring/SUMMARY_OF_HOURS.md)
+  [Click here to read summary of hours and justification.](hw-essays-spring/SUMMARY_OF_HOURS.md)
 
 ## 9.  Summary of Expenses
-  [Click here to read summary of expenses](hw-essays-spring/SUMMARY_OF_EXPENSES.md)
+  [Click here to read summary of expenses.](hw-essays-spring/SUMMARY_OF_EXPENSES.md)
 
 ## 10. Appendix
 
