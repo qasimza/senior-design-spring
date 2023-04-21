@@ -16,7 +16,13 @@ WA1.6	Both
 WA1.7	Black-Box  
 WA1.8	Functional  
 WA1.9	Integration  
-WA1.10	Result : Login Page Produces correct results for each.  
+WA1.10	Result : Login Page Produces correct results for each.
+  
+Testing with correct credentials 
+![Login Page With Credentials](/hw-essays-spring/images/wa1.png) ![Home Page](/hw-essays-spring/images/wa1_2.png)  ![After Logging Out](/hw-essays-spring/images/wa1_2.png)   
+ ![Incorrect Credentials](/hw-essays-spring/images/wa1_3.png)
+
+Testing wit hincorrect credentials 
 	  
 **WA2.1	Web Application Test 2**  
 WA2.2	Ensure that the registration works correctly.    
