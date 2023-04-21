@@ -34,7 +34,11 @@ WA2.7	Black-Box
 WA2.8	Functional  
 WA2.9	Integration  
 WA2.10	Result: Registration page works seamlessly.  
-	  
+ 
+
+https://user-images.githubusercontent.com/48165574/233715908-d5ddbafa-c7a8-47a3-bf0a-72580c14e1f4.mp4
+
+
 **WA3.1	Web Application Test 3**  
 WA2.2	Ensure that the home page works correctly.  
 WA2.3	Test each button on home page to ensure it redirects to the correct page with correct user session values.   
