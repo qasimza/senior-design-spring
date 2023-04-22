@@ -114,9 +114,9 @@ RS.2.8	Functional
 RS.2.9	Unit  
 RS.2.10	Result: System produces desired output.  
 	  
-**RS.3.1	Recommendation System Test 3**
+**RS.3.1	Recommendation System Test 3**  
 RS.3.2	Ensure that the top n songs are output when Genre and Year is provided in query.  
-RS.3.3	Input values from the test sets. Record the number of matches for each query and the median similarity (based on median similarity score, 0 if no matches).  RS passes test if on average 10 or more results are produced with a median similarity score of 70%  
+RS.3.3	Input values from the test sets. Record the number of matches for each query and the median similarity (based on median similarity score, 0 if no matches).  RS passes test if on average 10 or more results are produced with a median similarity score of 70%.  
 RS.3.4	Input: Randomized Genre - Year pairs one at a time from test set.   
 RS.3.5	Output: Overall average number of results and average similarity score.  
 RS.3.6	Normal   
@@ -125,8 +125,8 @@ RS.3.8	Functional
 RS.3.9	Unit  
 RS.3.10	Result: System produces desired output.  
 	
-**RS.4.1	Recommendation System Test 4**
-RS.4.2	Ensure that the top n songs are output when Artist and Genre is provided in query  
+**RS.4.1	Recommendation System Test 4**   
+RS.4.2	Ensure that the top n songs are output when Artist and Genre is provided in query.  
 RS.4.3	Input values from the test sets. Record the number of matches for each query and the median similarity (based on median similarity score, 0 if no matches).  RS passes test if on average 10 or more results are produced and results have a median similarity score of 70%.  
 RS.4.4	Input: Randomized Genre(s) - Artist pairs one at a time from test set.   
 RS.4.5	Output: Overall average number of results and average similarity score.  
@@ -170,10 +170,10 @@ RS.7.9	Unit
 RS.7.10	Result: System produces desired output.  
 
 **T.1.1	Timing Test 1**  
-T.1.2	Ensure that the matches are returned in a reasonable amount of time (10 seconds)   
+T.1.2	Ensure that the matches are returned in a reasonable amount of time (10 seconds).   
 T.1.3	Run randomized queries from all test sets. Record time taken for searching. Ensure system produces results in less < 10 seconds 95 % of the time.  
 T.1.4	Input: Randomized queries from tests sets.  
-T.1.5	Output: Boolean Value indicating whether at least 95% of queries took less than 10 seconds   
+T.1.5	Output: Boolean Value indicating whether at least 95% of queries took less than 10 seconds.   
 T.1.6	Both  
 T.1.7	Black box  
 T.1.8	Performance  
