@@ -171,7 +171,7 @@ RS.7.10	Result: System produces desired output.
 
 **T.1.1	Timing Test 1**  
 T.1.2	Ensure that the matches are returned in a reasonable amount of time (10 seconds)   
-T.1.3	Run randomized queries from all test sets. Record time taken for searching. Ensure system produces results in less < 10 seconds 95 % of the time.
+T.1.3	Run randomized queries from all test sets. Record time taken for searching. Ensure system produces results in less < 10 seconds 95 % of the time.  
 T.1.4	Input: Randomized queries from tests sets.  
 T.1.5	Output: Boolean Value indicating whether at least 95% of queries took less than 10 seconds   
 T.1.6	Both  
