@@ -51,15 +51,15 @@ WA2.10	Result: Home page works seamlessly and maintains credentials needed.
 https://user-images.githubusercontent.com/48165574/233735620-7382f3ff-3a9f-41c0-96b1-98925e6dfc77.mp4
 
 	  
-**WA4.1	Web Application Test 4**
-WA4.2	Ensure that the search page works correctly.
-WA4.3	Input randomized values for each search option. Ensure that query is registered correctly and responds with correct matching values for the query. Ensure that user is redirected to results page once the search query is submitted. 
-WA4.4	Input: Randomized search queries. (Test each search option individually, combination of options, all) 
-WA4.5	Output: Results page with suggested songs. 
-WA4.6	Both
-WA4.7	Black-Box
-WA4.8	Functional
-WA4.9	Integration
+**WA4.1	Web Application Test 4**  
+WA4.2	Ensure that the search page works correctly.  
+WA4.3	Input randomized values for each search option. Ensure that query is registered correctly and responds with correct matching values for the query. Ensure that user is redirected to results page once the search query is submitted.   
+WA4.4	Input: Randomized search queries. (Test each search option individually, combination of options, all)   
+WA4.5	Output: Results page with suggested songs.   
+WA4.6	Both  
+WA4.7	Black-Box  
+WA4.8	Functional  
+WA4.9	Integration  
 WA4.10	Result: Results page rendered with matching suggestions (accuracy of results measured in RS tests) 
 
 https://user-images.githubusercontent.com/48165574/233741092-6fb95265-e99e-4e44-8db9-b44fc829515b.mp4
