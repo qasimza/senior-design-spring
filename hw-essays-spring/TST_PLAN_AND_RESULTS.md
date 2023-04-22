@@ -102,8 +102,11 @@ RS.1.7	White-box
 RS.1.8	Functional  
 RS.1.9	Unit  
 RS.1.10	Result: System produces desired output.  
+
+![rs1](https://user-images.githubusercontent.com/48165574/233794509-a7bd325e-3009-499c-ac47-f0f9a1a7dcab.png)
 	
 **RS.2.1	Recommendation System Test 2**  
+
 RS.2.2	Ensure that the top n songs are output when only one of the following - Artist, Genre, or Year - is provided in query  
 RS.2.3	For each of the following - Artist, Genre, or Year, input values from the tests sets. Record the number of matches for each query and the median similarity (based on median similarity score, 0 if no matches).  RS passes test if on average 10 or more results are produced with a median similarity score of 70%  
 RS.2.4	Input: Artist, Genre, Year values one at a time from respective test sets.  
@@ -113,6 +116,9 @@ RS.2.7	White box
 RS.2.8	Functional  
 RS.2.9	Unit  
 RS.2.10	Result: System produces desired output.  
+
+![rs2](https://user-images.githubusercontent.com/48165574/233794556-06d5e6ca-ea8f-48a4-ae6e-8cf635913e14.png)
+
 	  
 **RS.3.1	Recommendation System Test 3**  
 RS.3.2	Ensure that the top n songs are output when Genre and Year is provided in query.  
@@ -125,6 +131,9 @@ RS.3.8	Functional
 RS.3.9	Unit  
 RS.3.10	Result: System produces desired output.  
 	
+	![rs3](https://user-images.githubusercontent.com/48165574/233794561-28722de6-0ab3-4799-9735-7c1ce8bce3e7.png)
+
+	
 **RS.4.1	Recommendation System Test 4**   
 RS.4.2	Ensure that the top n songs are output when Artist and Genre is provided in query.  
 RS.4.3	Input values from the test sets. Record the number of matches for each query and the median similarity (based on median similarity score, 0 if no matches).  RS passes test if on average 10 or more results are produced and results have a median similarity score of 70%.  
@@ -135,6 +144,9 @@ RS.4.7	White box
 RS.4.8	Functional  
 RS.4.9	Unit  
 RS.4.10	Result: System produces desired output.  
+
+![rs4](https://user-images.githubusercontent.com/48165574/233794573-acbecb06-113b-4504-8335-87edaa318e81.png)
+
 	  
 **RS.5.1	Recommendation System Test 5**  
 RS.5.2	Ensure that the top n songs are output when Artist and Year is provided in query  
@@ -145,7 +157,10 @@ RS.5.6	Normal
 RS.5.7	White box  
 RS.5.8	Functional  
 RS.5.9	Unit  
-RS.5.10	Result: System produces desired output.  
+RS.5.10	Result: System produces desired output. 
+
+![rs5](https://user-images.githubusercontent.com/48165574/233794581-6f44d546-e22b-47f8-9299-da7ef31545e9.png)
+
 	
 **RS.6.1	Recommendation System Test 6**  
 RS.6.2	Ensure that the top n songs are output when Song and Artist/Genre/Year (Song Aritst/Genre/Year and Artist/Genre/Year are different) is provided in query  
@@ -157,6 +172,9 @@ RS.6.7	White box
 RS.6.8	Functional  
 RS.6.9	Unit  
 RS.6.10	Result: System produces desired output.  
+
+![rs6](https://user-images.githubusercontent.com/48165574/233794590-11db28e8-f58d-4a06-a81f-a2333afdf955.png)
+
 	
 **RS.7.1	Recommendation System Test 7**  
 RS.7.2	Ensure that the Advanced Search Parameter values are reflected in the output.  
@@ -168,6 +186,9 @@ RS.7.7	White box
 RS.7.8	Functional  
 RS.7.9	Unit  
 RS.7.10	Result: System produces desired output.  
+
+![rs7](https://user-images.githubusercontent.com/48165574/233794598-45aea21f-ee9e-46bf-86f5-e1e5a642e6ad.png)
+
 
 **T.1.1	Timing Test 1**  
 T.1.2	Ensure that the matches are returned in a reasonable amount of time (10 seconds).   
