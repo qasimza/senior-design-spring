@@ -131,7 +131,7 @@ RS.3.8	Functional
 RS.3.9	Unit  
 RS.3.10	Result: System produces desired output.  
 	
-	![rs3](https://user-images.githubusercontent.com/48165574/233794561-28722de6-0ab3-4799-9735-7c1ce8bce3e7.png)
+![rs3](https://user-images.githubusercontent.com/48165574/233794561-28722de6-0ab3-4799-9735-7c1ce8bce3e7.png)
 
 	
 **RS.4.1	Recommendation System Test 4**   
