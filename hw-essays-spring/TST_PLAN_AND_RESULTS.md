@@ -201,6 +201,8 @@ T.1.8	Performance
 T.1.9	Unit  
 T.1.10	Result: System produces desired output.  
 
+![image](https://user-images.githubusercontent.com/48165574/233796620-e7e88683-ac7f-44e8-ae67-df35c0c9ba35.png)
+
 ##  Test Case Matrix
 
 ![Test Case Matrix](/hw-essays-spring/images/test_case_matrix.png)
