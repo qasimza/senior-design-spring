@@ -5,7 +5,7 @@ Tune-Me is a web-based application that allows users to generate playlists based
 
 ## Test Case Descriptions and Results
   
-Following tests were conducted to validate project outcomes. n = 15.
+Following tests were conducted to validate project outcomes. n = 20.
   
 **WA1.1	Web Application Test 1**  
 WA1.2	Ensure that the login/logout authentication works correctly.  
