@@ -96,7 +96,7 @@ tune-me/
 **Step 1:** Sign Up  
 **Step 2:** Login  
 **Step 3:** Perform a Search  
-**Step 4:** Modify Search or perofrm a new one  
+**Step 4:** Modify Search or perform a new one  
 **Step 5:** Logout  
 
 ## FAQs
