@@ -93,11 +93,11 @@ tune-me/
 
 ## How to Use TuneMe?
 
-**Step 1:** Sign Up
-**Step 2:** Login
-**Step 3:** Perform a Search
-**Step 4:** Modify Search or perofrm a new one
-**Step 5:** Logout
+**Step 1:** Sign Up  
+**Step 2:** Login  
+**Step 3:** Perform a Search  
+**Step 4:** Modify Search or perofrm a new one  
+**Step 5:** Logout  
 
 ## FAQs
 
