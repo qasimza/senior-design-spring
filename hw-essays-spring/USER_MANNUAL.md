@@ -101,9 +101,29 @@ tune-me/
 
 ## FAQs
 
+### Can I create multiple accounts under the same email?
+No, TuneMe only allows for one account per email (and per username). You can, however use a different email to create a second account.
+
+### What does the advanced search do? What do all those terms mean?
+The advanced search parameters are available to users for fine tuning their search queries. Currently, Tune me supports the following paramters-   
+**Popularity:** A measure of how popular a song is on Spotify. Scale: 0 (least popular) to 100 (most popular).  
+**Danceability:** A measure of how suitable a track is for dancing. Scale: 0 (least danceable) to 100 (most danceable).   
+**Energy:** A measure of the intensity and activity level of a track. Scale: 0 (lowest energy) to 100 (highest energy).  
+**Loudness:** A measure of the overall volume of a track, expressed in decibels. Scale: -60 dB (quietest track) to 538 dB (loudest track).
+**Speechiness:** A measure of how much spoken word content there is in a track (Example: Rap/Poetry tends to have alot more spoken word). Scale: 0 (least speechy) to 100 (most speechy).   
+**Acousticness:** A measure of how much of a track's sound is comprised of acoustic instruments/natural sounds, as opposed to electronic or synthesized sounds. Scale: 0 (least acoustic) to 100 (most acousitc).  
+**Instrumentalness:** A measure of how much of a track's sound is comprised of purely instrumental music, without vocals.
+**Liveness:** A measure of how much of a track's sound was recorded live, as opposed to in a studio.
+**Valence:** A measure of the positivity or happiness of a track's sound, based on factors such as key and chord progression.
+**Tempo:** The speed of a track, measured in beats per minute.
+**Key:** The tonal center of a track, expressed as a musical key (e.g. C Major or A Minor).
+**Mode:** The overall mood of a track, which can be major or minor.
+
 ### My Results were inaccurate/dissatisfactory. How can I get better matches?
-Unfortunately, not all queries will produce the best results. This is due to the lack of data in the dataset being used. Try to use different values (E.g. If the song name does not produce the best results, try artist or genre, etc.) to look up songs or fine tune the advanced parameters.
+Unfortunately, not all queries will produce the best results. This is due to the lack of data in the dataset being used. Try to use different values (Example: If the song name does not produce the best results, try artist or genre, etc.) to look up songs or fine tune the advanced parameters.
 
 ### My search did not produce any results. What went wrong?
+Occasionally, TuneMe may not produce any results due to the complex nature of a user's query. Try to reduce the number of parameters you are using to search to get more results. 
+
 
 
