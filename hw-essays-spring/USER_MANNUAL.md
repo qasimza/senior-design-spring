@@ -101,4 +101,9 @@ tune-me/
 
 ## FAQs
 
-### 
+### My Results were inaccurate/dissatisfactory. How can I get better matches?
+Unfortunately, not all queries will produce the best results. This is due to the lack of data in the dataset being used. Try to use different values (E.g. If the song name does not produce the best results, try artist or genre, etc.) to look up songs or fine tune the advanced parameters.
+
+### My search did not produce any results. What went wrong?
+
+
