@@ -115,7 +115,8 @@ The advanced search parameters are available to users for fine tuning their sear
 **Instrumentalness:** A measure of how much of a track's sound is comprised of purely instrumental music, without vocals. Scale: 0 (least instrumental) to 100 (most instrumental).   
 **Liveness:** A measure of how much of a track's sound was recorded live, as opposed to in a studio.  Scale: 0 (least) to 100 (most).   
 **Valence:** A measure of the positivity or happiness of a track's sound, based on factors such as key and chord progression.  Scale: 0 (least positive) to 100 (most positive).    
-**Tempo:** The speed of a track, measured in beats per minute.   Scale: 0 BPM to 246 BPM.      
+**Tempo:** The speed of a track, measured in beats per minute. Scale: 0 BPM to 246 BPM.    
+**Explicit:** Check to include explicit songs.
 
 ### My Results were inaccurate/dissatisfactory. How can I get better matches?
 Unfortunately, not all queries will produce the best results. This is due to the lack of data in the dataset being used. Try to use different values (Example: If the song name does not produce the best results, try artist or genre, etc.) to look up songs or fine tune the advanced parameters.
@@ -123,5 +124,5 @@ Unfortunately, not all queries will produce the best results. This is due to the
 ### My search did not produce any results. What went wrong?
 Occasionally, TuneMe may not produce any results due to the complex nature of a user's query. Try to reduce the number of parameters you are using to search to get more results. 
 
-
-
+### My Search results do not have themes for some of the tracks. Why?
+Unfortunately, not all songs have been categorized into themes. Based on lyrical similarity, some songs seem to have the same themes as others. However not all songs have been tagged based on the similarity-score analysis, which made it too ambiguous to assign it a theme.  
