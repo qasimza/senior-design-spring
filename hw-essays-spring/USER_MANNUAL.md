@@ -112,12 +112,12 @@ The advanced search parameters are available to users for fine tuning their sear
 **Loudness:** A measure of the overall volume of a track, expressed in decibels. Scale: -60 dB (quietest track) to 538 dB (loudest track).
 **Speechiness:** A measure of how much spoken word content there is in a track (Example: Rap/Poetry tends to have alot more spoken word). Scale: 0 (least speechy) to 100 (most speechy).   
 **Acousticness:** A measure of how much of a track's sound is comprised of acoustic instruments/natural sounds, as opposed to electronic or synthesized sounds. Scale: 0 (least acoustic) to 100 (most acousitc).  
-**Instrumentalness:** A measure of how much of a track's sound is comprised of purely instrumental music, without vocals.
-**Liveness:** A measure of how much of a track's sound was recorded live, as opposed to in a studio.
-**Valence:** A measure of the positivity or happiness of a track's sound, based on factors such as key and chord progression.
-**Tempo:** The speed of a track, measured in beats per minute.
-**Key:** The tonal center of a track, expressed as a musical key (e.g. C Major or A Minor).
-**Mode:** The overall mood of a track, which can be major or minor.
+**Instrumentalness:** A measure of how much of a track's sound is comprised of purely instrumental music, without vocals.  
+**Liveness:** A measure of how much of a track's sound was recorded live, as opposed to in a studio.  
+**Valence:** A measure of the positivity or happiness of a track's sound, based on factors such as key and chord progression.  
+**Tempo:** The speed of a track, measured in beats per minute.  
+**Key:** The tonal center of a track, expressed as a musical key (e.g. C Major or A Minor).  
+**Mode:** The overall mood of a track, which can be major or minor.  
 
 ### My Results were inaccurate/dissatisfactory. How can I get better matches?
 Unfortunately, not all queries will produce the best results. This is due to the lack of data in the dataset being used. Try to use different values (Example: If the song name does not produce the best results, try artist or genre, etc.) to look up songs or fine tune the advanced parameters.
