@@ -1,6 +1,7 @@
 # Final Assessment
 
 ## Part A- Individual Contribution, Skills Aplied/Built Upon, Success and Obstacles
+Being the only person on my team, I worked on this project start to end. I  this project. 
 What was your individual contribution to this project? 
 Did you apply and build upon the skills identified in your initial assessment from last Fall? 
 What did you do and how did you do it? What did you learn and what competencies did you build? What were your successes, what were you obstacles?
