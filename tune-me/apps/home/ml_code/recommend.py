@@ -19,23 +19,26 @@ themes_data_set = pd.read_csv(r"C:\Users\Zaina\OneDrive - University of Cincinna
 
 
 def clean_query(query):
-    query.pop("csrf_token")
-    query.pop("search")
+    query.pop("csrf_token", None)
+    query.pop("search", None)
     for key, value in query.items():
         # convert from lists to appropriate format
         if value == ['']:
             query[key] = ''
         else:
-            if key not in ["artists", "album_name", "song_title", "genres", "themes", "explicit"]:
+            if key not in ["artist", "album_name", "song_title", "genres", "themes", "explicit"]:
                 query[key] = float(query[key][0])
+                if key in ["danceability", "energy", "speechiness", "acoustics", "instrumentalness", "liveness", "valence"]:
+                   query[key] = query[key]/100
             else:
                 query[key] = ' '.join(value)
+        
     query["artists"] = query.pop("artist")
-    query["track_genre"] = query.pop("genres")
+    if 'genres' in query.keys():
+        query["track_genre"] = query.pop("genres")
     query["track_name"] = query.pop("song_title")
     query["acousticness"] = query.pop("acoustics")
     return query
-
 
 def case(form_data):
     fields = list()
@@ -98,6 +101,36 @@ def case(form_data):
 
     return case_num, fields
 
+def find_song_features(fields, cleaned_query):
+
+    search_query = pd.DataFrame(columns=['artists', 'album_name', 'track_name', 'popularity', 'duration_ms',
+                                            'explicit', 'danceability', 'energy', 'key', 'loudness', 'mode',
+                                            'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'valence',
+                                            'tempo', 'time_signature', 'track_genre', 'year'])
+
+    if all(elem in fields for elem in ['artists', 'track_genre', 'year']):
+        search_query = master_data_set[(master_data_set['track_name'] == cleaned_query['track_name'].upper())
+                                        & (master_data_set['artists'] == cleaned_query['artists'])
+                                        & (master_data_set['year'] == cleaned_query['year'])
+                                        & (master_data_set['track_genre'] == cleaned_query['track_genre'])].head(1)
+    
+    if search_query.empty and all(elem in fields for elem in ['artists', 'year']):
+        search_query = master_data_set[(master_data_set['track_name'] == cleaned_query['track_name'].upper())
+                                        & (master_data_set['artists'] == cleaned_query['artists'])
+                                        & (master_data_set['year'] == cleaned_query['year'])].head(1)
+
+    if search_query.empty and all(elem in fields for elem in ['artists']):
+        search_query = master_data_set[(master_data_set['track_name'] == cleaned_query['track_name'].upper())
+                                        & (master_data_set['artists'] == cleaned_query['artists'])].head(1)
+
+    if search_query.empty and all(elem in fields for elem in ['year']):
+        search_query = master_data_set[(master_data_set['track_name'] == cleaned_query['track_name'].upper())
+                                        & (master_data_set['year'] == cleaned_query['year'])].head(1)
+        
+    if search_query.empty:
+        search_query = master_data_set[(master_data_set['track_name'] == cleaned_query['track_name'].upper())].head(1)  # use just song name   
+
+    return search_query
 
 def find_songs(cleaned_query, n=5):
     _, fields = case(cleaned_query)
@@ -105,39 +138,48 @@ def find_songs(cleaned_query, n=5):
                                             'explicit', 'danceability', 'energy', 'key', 'loudness', 'mode',
                                             'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'valence',
                                             'tempo', 'time_signature', 'track_genre', 'year'])
+    search_query = pd.DataFrame(columns=['artists', 'album_name', 'track_name', 'popularity', 'duration_ms',
+                                            'explicit', 'danceability', 'energy', 'key', 'loudness', 'mode',
+                                            'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'valence',
+                                            'tempo', 'time_signature', 'track_genre', 'year'])
+    all_num_fields = ['popularity', 'danceability', 'energy', 'key', 'loudness', 'mode', 'speechiness', 'acousticness', 'instrumentalness', 
+                          'liveness', 'valence', 'tempo', 'year']
+    num_fields = [field for field in fields if field not in ["track_name", "artists", 'track_genre', 'themes']]
+    wordy_query = ''
 
-    if 'track_name' in fields:  # query with a song name
-        search_query = master_data_set[(master_data_set['track_name'] == cleaned_query['track_name'].upper()) & (
-                    master_data_set['artists'] == cleaned_query['artists'])]
-        num_fields = [field for field in fields if field not in ["track_name", "artists", 'track_genre', 'themes']]
-        wordy_query = ''
-
+    if 'track_name' in fields and len(fields) == 1: # Base case - only song name provided
+        search_query = master_data_set[(master_data_set['track_name'] == cleaned_query['track_name'].upper())].head(1)
         if not search_query.empty:
-            search_query.drop("track_name", axis=1)
-            track_wt = 1 / len(fields)
-            numeric_wt = len(num_fields)/len(fields)
-            wordy_wt = 1 - track_wt - numeric_wt
-            if 'artists' in fields:
-                wordy_query += search_query["artists"].str.cat(sep=' ')
-            if 'track_genre' in fields:
-                wordy_query += ' ' + search_query["track_genre"].str.cat(sep=' ')
-            else:
-                pass
+            relevant_columns = master_data_set[all_num_fields]
+            similarity_score = rbf_kernel(search_query[all_num_fields], relevant_columns, 0.1)
         else:
+            return recommendations
+
+    elif 'track_name' in fields and not find_song_features(fields, cleaned_query).empty:  # query with a song name and at least one other parameter
+        
+        search_query = find_song_features(fields, cleaned_query)
+        search_query.drop("track_name", axis=1)
+        
+        track_wt = 1 / len(fields)
+        numeric_wt = len(num_fields)/len(fields)
+        wordy_wt = 1 - track_wt - numeric_wt
+        
+        if 'artists' in fields:
+            wordy_query += search_query["artists"].str.cat(sep=' ')
+        
+        if 'track_genre' in fields:
+            wordy_query += ' ' + search_query["track_genre"].str.cat(sep=' ')
+        
+        relevant_columns = master_data_set[all_num_fields]
+        similarity_score = track_wt * rbf_kernel(search_query[all_num_fields], relevant_columns, 0.1)
+
+        if len(num_fields) != 0:
             search_query = pd.DataFrame(0, columns=num_fields, index=[0])
-            numeric_wt = len(num_fields)/len(fields)
-            track_wt = 0
-            wordy_wt = 1 - numeric_wt
-
-        relevant_columns = master_data_set[num_fields]
-
-        similarity_score_for_song = rbf_kernel(search_query[num_fields], relevant_columns, 0.1)
-
-        search_query = pd.DataFrame(0, columns=num_fields, index=[0])
-        for field in num_fields:
-            search_query[field] = cleaned_query[field]
-
-        similarity_score = rbf_kernel(search_query[num_fields], relevant_columns, 0.1)  # for numbers
+            for field in num_fields:
+                search_query[field] = cleaned_query[field]
+            relevant_columns = master_data_set[num_fields]
+            num_similarity_score = rbf_kernel(search_query[num_fields], relevant_columns, 0.1)  # for numbers
+            similarity_score = similarity_score + numeric_wt * num_similarity_score
 
         if any([field in ["artists", "track_genre", "themes"] for field in fields]):  # Account for wordy similiarity
             empty_list = [''] * master_data_set.shape[0]
@@ -156,27 +198,45 @@ def find_songs(cleaned_query, n=5):
             tfidf_vectors = vectorizer.fit_transform(relevant_wordy_columns['wordy_corpus'])
             query_vector = vectorizer.transform([wordy_query])
             cosine_similarities = cosine_similarity(tfidf_vectors, query_vector)
-            if 'track_name' in fields:
-                similarity_score = wordy_wt * cosine_similarities.T + numeric_wt * similarity_score + track_wt * similarity_score_for_song
-            else:
-                similarity_score = wordy_wt * cosine_similarities.T + numeric_wt * similarity_score
+            similarity_score = similarity_score + wordy_wt * cosine_similarities.T
+        
+        similarity_score = np.argsort(similarity_score)[0, -1:-n-1:-1]
+        recommendations = master_data_set.iloc[similarity_score]
+        return recommendations
+         
     else:  # query resembling one with a song name but does not have one
-        num_fields = [field for field in fields if field not in ["artists", 'track_genre', 'themes']]
-        search_query = {field: cleaned_query[field] for field in num_fields}
-        search_query = pd.DataFrame(search_query, columns=num_fields, index=[0])
-        relevant_columns = master_data_set[num_fields]
-        similarity_score = rbf_kernel(search_query, relevant_columns, 0.1)
+
+        similarity_score = None
+
+        if "track_name" in fields:
+            search_query.drop("track_name", axis=1)
+
+        numeric_wt = len(num_fields)/len(fields)
+        wordy_wt = 1 - numeric_wt
+        
+        if 'artists' in fields:
+            wordy_query += search_query["artists"].str.cat(sep=' ')
+        
+        if 'track_genre' in fields:
+            wordy_query += ' ' + search_query["track_genre"].str.cat(sep=' ')
+
+        if len(num_fields) != 0:
+            search_query = pd.DataFrame(0, columns=num_fields, index=[0])
+            for field in num_fields:
+                search_query[field] = cleaned_query[field]
+            relevant_columns = master_data_set[num_fields]
+            num_similarity_score = rbf_kernel(search_query[num_fields], relevant_columns, 0.1)  # for numbers
+            similarity_score = numeric_wt * num_similarity_score
 
         if any([field in ["artists", "track_genre", "themes"] for field in fields]):  # Account for wordy similiarity
-            wordy_query = ''
             empty_list = [''] * master_data_set.shape[0]
             relevant_wordy_columns = pd.DataFrame({'wordy_corpus': empty_list})
             if 'artists' in fields:
-                wordy_query += cleaned_query["artists"]
+                wordy_query += ' ' + cleaned_query["artists"]
                 artist_column = master_data_set['artists'].apply((lambda x: ' '.join(x.split(';'))))
                 relevant_wordy_columns['wordy_corpus'] = relevant_wordy_columns['wordy_corpus'] + ' ' + artist_column
             if 'track_genre' in fields:
-                wordy_query += (cleaned_query["track_genre"] + ' ')
+                wordy_query += (' ' + cleaned_query["track_genre"] + ' ')
                 genre_column = master_data_set['track_genre'].apply((lambda x: ' '.join(x.split(';'))))
                 relevant_wordy_columns['wordy_corpus'] = relevant_wordy_columns['wordy_corpus'] + ' ' + genre_column
             else:  # themes
@@ -185,14 +245,13 @@ def find_songs(cleaned_query, n=5):
             tfidf_vectors = vectorizer.fit_transform(relevant_wordy_columns['wordy_corpus'])
             query_vector = vectorizer.transform([wordy_query])
             cosine_similarities = cosine_similarity(tfidf_vectors, query_vector)
-            numeric_wt = len(num_fields) / len(fields)
-            wordy_wt = 1 - numeric_wt
-            similarity_score = wordy_wt * cosine_similarities.T + numeric_wt * similarity_score
-    similarity_score = np.argsort(similarity_score)[0, -1:-n:-1]
+            similarity_score = similarity_score + wordy_wt * cosine_similarities.T if similarity_score == 0 else wordy_wt * cosine_similarities.T   
+    
+        if similarity_score is not None:
+            similarity_score = np.argsort(similarity_score)[0, -1:-n-1:-1]
+            recommendations = master_data_set.iloc[similarity_score]
 
-    recommendations = master_data_set.iloc[similarity_score]
-
-    return recommendations
+        return recommendations
 
 
 def single_param_query(cleaned_query, n=5, explicit=False):
@@ -287,6 +346,7 @@ def three_param_queries(cleaned_query, n=5):
 
 
 def recommend_songs(form_data):
+    print(form_data)
     query = clean_query(form_data)
     query.pop("explicit")
     n = int(query.pop('num_tracks'))
@@ -300,13 +360,18 @@ def recommend_songs(form_data):
         recommendations = two_param_queries(query, n)
     elif c in [14, 15, 16, 17, 18]:
         recommendations = three_param_queries(query, n)
+    if recommendations is None:
+        import random
+        random_values = random.sample(range(0, len(master_data_set)), n)
+        recommendations = master_data_set.iloc[random_values]
+
     return recommendations
 
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
 
-print(recommend_songs({'csrf_token': ['IjRlYTc0MmQ3MjAzODQxYzQxMWEyMmJjNmE0MTBhMjc0MzM2Y2Y3MGQi.ZEGBdg.wo0p_lmIC0A6H_0a_pjyU4MSuMk'],
-                       'song_title': [''], 'artist': [''], 'year': [''], 'genres': ['rock'], 'popularity': ['13'], 'danceability': [''],
-                       'energy': [''], 'loudness': [''], 'speechiness': ['44'], 'acoustics': [''], 'instrumentalness': [''],
-                       'liveness': [''], 'valence': [''], 'tempo': [''], 'search': [''], 'num_tracks':['10'], 'explicit': ['n']}))
+print(recommend_songs({'csrf_token': ['IjMwMzZmNTA5MDAwODYzNGUwYmIzMTU5ZmFjMGRlMjBmYjU2NjNkZjAi.ZEbWiw.Ya2CX3t5OmOD3TBNANPyWENdg3A'], 
+                       'song_title': [''], 'artist': ['Taylor Swift'], 'year': [''], 'num_tracks': ['10'], 'popularity': [''], 
+                       'danceability': [''], 'energy': [''], 'loudness': [''], 'speechiness': [''], 'acoustics': [''], 'instrumentalness': [''], 
+                       'liveness': [''], 'valence': [''], 'tempo': [''], 'search': [''], 'explicit': ['n']}))
