@@ -1,7 +1,7 @@
 # Final Assessment
 
 ## Part A- Individual Contribution, Skills Aplied/Built Upon, Success and Obstacles
-Being the only person on my team, I worked on this project start to end. This means that I was responsible for all phases of this project, starting from Prelimnary Research to Documentation and including Secondary Research, Protyping and Designing, Development, Testing and Verification, validation and Deployment, and Support for Additional Features. THe skills developed in the past both during class and through co-ops proved ot be immensely helpful in completing this project. 
+Being the only person on my team, I worked on this project start to end. This means that I was responsible for all phases of this project, starting from Prelimnary Research to Documentation and including Secondary Research, Protyping and Designing, Development, Testing and Verification, validation and Deployment, and Support for Additional Features. The skills developed in the past both during class and through co-ops proved ot be immensely helpful in completing this project. 
 
 
 What was your individual contribution to this project? 
