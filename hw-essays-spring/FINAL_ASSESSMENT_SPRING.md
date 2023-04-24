@@ -13,10 +13,4 @@ This project was able to produce the following results:
  - At least 70 % median accuracy.  
  - 0.092 seconds/query.  
 As menitioned before, I worked on this project entirely by myself, which makes it difficult to comment in the context of grup work specific to this project. However, 
-in my previous experiences with group work, I had learnt that effective communication, collaboration, and careful delegation of tasks are crucial for a success. Establishing clear goals, timelines, and expectations is key for completing tasks in time and dealing with obstacles. Working on my own, also made me see the merits of being in a team, how divide-and-conquer strategies in project management are crucial for success. It made me appreciate  
-
-
-What did your group accomplish? 
-What did you learn about group work? What aspects of teamwork were successful and what aspects of teamwork were not successful? 
-How did your efforts on the project compare to that of your teammates?  
-Do any team members deserve special recognition?
+in my previous experiences with group work, I had learnt that effective communication, collaboration, and careful delegation of tasks are crucial for a success. Establishing clear goals, timelines, and expectations is key for completing tasks in time and dealing with obstacles. Working on my own, also made me see the merits of being in a team, how divide-and-conquer strategies are particualry useful in work-satisfaction as well as completion of tasks. It made me appreciate the diversity of ideas brought about by the presence of mutiple team-members and see the value of collaborative work. 
